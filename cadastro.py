@@ -36,4 +36,4 @@ def cadastrar_aluno():
     alunos.append(novo_aluno)
     salvar_alunos(alunos)
 
-    print(f"Aluno cadastrado com sucesso! Matrícula: {matricula}\n")
+    print(f"✅ Aluno cadastrado com sucesso! Matrícula: {matricula}\n") 
