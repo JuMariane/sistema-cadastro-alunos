@@ -1,7 +1,7 @@
 """
 Funcionalidade: Cadastrar aluno.
-Responsável (sugestão do enunciado): Aluno 1.
-Branch sugerida: cadastro
+Responsável: Julia Mariane (Aluno 1).
+Branch: cadastro
 """
 
 from storage import carregar_alunos, salvar_alunos, proxima_matricula
@@ -17,11 +17,17 @@ def cadastrar_aluno():
 
     try:
         idade = int(input("Idade: ").strip())
+        if idade <= 0:
+            print("Erro: a idade deve ser maior que zero.\n")
+            return
     except ValueError:
         print("Erro: idade deve ser um número inteiro.\n")
         return
 
     curso = input("Curso: ").strip()
+    if not curso:
+        print("Erro: o curso não pode ser vazio.\n")
+        return
 
     alunos = carregar_alunos()
     matricula = proxima_matricula(alunos)
@@ -36,4 +42,4 @@ def cadastrar_aluno():
     alunos.append(novo_aluno)
     salvar_alunos(alunos)
 
-    print(f"✅ Aluno cadastrado com sucesso! Matrícula: {matricula}\n") 
+    print(f"Aluno cadastrado com sucesso! Matrícula: {matricula}\n")
