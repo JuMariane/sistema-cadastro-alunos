@@ -1,7 +1,7 @@
 """
 Funcionalidade: Atualizar dados de um aluno.
-Responsável (sugestão do enunciado): Aluno 3.
-Branch sugerida: atualizacao
+Responsável: Aluno 3.
+Branch: atualizacao
 """
 
 from storage import carregar_alunos, salvar_alunos
@@ -19,16 +19,17 @@ def atualizar_aluno():
 
     for aluno in alunos:
         if aluno["matricula"] == matricula:
-            print("Deixe em branco para manter o valor atual.")
+            print(f"Editando dados de: {aluno['nome']}")
+            print("Pressione ENTER para manter o valor atual.")
 
-            novo_nome = input(f"Nome ({aluno['nome']}): ").strip()
-            nova_idade = input(f"Idade ({aluno['idade']}): ").strip()
-            novo_curso = input(f"Curso ({aluno['curso']}): ").strip()
+            novo_nome = input(f"Novo Nome [{aluno['nome']}]: ").strip()
+            nova_idade = input(f"Nova Idade [{aluno['idade']}]: ").strip()
+            novo_curso = input(f"Novo Curso [{aluno['curso']}]: ").strip()
 
             if novo_nome:
                 aluno["nome"] = novo_nome
             if nova_idade:
-                if nova_idade.isdigit():
+                if nova_idade.isdigit() and int(nova_idade) > 0:
                     aluno["idade"] = int(nova_idade)
                 else:
                     print("Idade inválida, valor mantido.")
