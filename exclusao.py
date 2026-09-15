@@ -1,7 +1,7 @@
 """
 Funcionalidade: Excluir aluno.
-Responsável (sugestão do enunciado): Aluno 4.
-Branch sugerida: exclusao
+Responsável: Aluno 4.
+Branch: exclusao
 """
 
 from storage import carregar_alunos, salvar_alunos
@@ -20,7 +20,7 @@ def excluir_aluno():
     for aluno in alunos:
         if aluno["matricula"] == matricula:
             confirmacao = input(
-                f"Confirma exclusão de '{aluno['nome']}' (matrícula {matricula})? [s/n]: "
+                f"Confirma a exclusão de '{aluno['nome']}' (matrícula {matricula})? [s/n]: "
             ).strip().lower()
 
             if confirmacao == "s":
