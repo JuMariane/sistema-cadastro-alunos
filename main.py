@@ -4,6 +4,8 @@ Ponto de entrada do programa - integra as funcionalidades
 desenvolvidas em cada branch (cadastro, consulta, atualizacao, exclusao).
 """
 
+# Fork desse projeto criado por Lucas e Tamires
+
 from cadastro import cadastrar_aluno
 from consulta import consultar_aluno
 from atualizacao import atualizar_aluno
