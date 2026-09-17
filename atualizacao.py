@@ -1,6 +1,6 @@
 """
 Funcionalidade: Atualizar dados de um aluno.
-Responsável: Aluno 3.
+Responsável: Julia Mariane.
 Branch: atualizacao
 """
 

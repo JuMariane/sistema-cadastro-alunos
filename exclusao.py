@@ -1,6 +1,6 @@
 """
 Funcionalidade: Excluir aluno.
-Responsável: Aluno 4.
+Responsável: Ágatha Rodrigues.
 Branch: exclusao
 """
 
