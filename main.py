@@ -10,6 +10,8 @@ from atualizacao import atualizar_aluno
 from exclusao import excluir_aluno
 
 
+# Importa as funções usadas no sistema.
+
 def exibir_menu():
     print("=" * 40)
     print("   SISTEMA DE CADASTRO DE ALUNOS")
@@ -21,6 +23,7 @@ def exibir_menu():
     print("0. Sair")
     print("=" * 40)
 
+# Exibe o menu com as opções disponíveis.
 
 def main():
     while True:
@@ -41,6 +44,7 @@ def main():
         else:
             print("Opção inválida. Tente novamente.\n")
 
+# Executa a função escolhida pelo usuário.
 
 if __name__ == "__main__":
     main()
